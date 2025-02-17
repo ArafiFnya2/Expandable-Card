@@ -87,3 +87,18 @@ main {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column; 
+      height: 100vh; 
+    }
+  
+    .panel {
+      flex: 1;
+    }
+  
+    .panel.active {
+      flex: 3; 
+    }
+  }
