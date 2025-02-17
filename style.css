@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: bisque;
+    background-image: url(/image/paw-pattern\ 1.png);
+}
+
+h1,p{
+    color: brown;
+}
+
+.gang{
+    padding: 17px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 90vh;
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+
+.panel h1{
+    font-size: 35px;
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h1{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel p{
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active p{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container{
+    width: 100vw;
+    transition: opacity 0.3s ease-in 0.4s;
+    }
+
+    .panel:nth-of-type(4)
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
